@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # Local
     "accounts",
     "albums",
+    # Third-party Apps
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -144,3 +146,6 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_REDIRECT_URL = "home"  # or, can use the actual url with name 'home': "/"
 LOGOUT_REDIRECT_URL = "home"
+
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
