@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Chicago"
 
 USE_I18N = True
 
@@ -125,6 +125,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+# staticfiles_dirs is the location for static files in local development
+STATICFILES_DIRS = (str(BASE_DIR.joinpath("static")),)
+
+# static_root is for static files for production (filename is 'staticfiles' instead of 'static')
+STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
+
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+
+# TODO Set different images and see how staticfiles_finders goes to top level first. (pg87 of dfp)
+
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
