@@ -127,3 +127,6 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+LOGIN_REDIRECT_URL = "home"  # or, can use the actual url with name 'home': "/"
+LOGOUT_REDIRECT_URL = "home"
