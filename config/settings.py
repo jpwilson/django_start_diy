@@ -37,11 +37,16 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
+    #
     # Local
     "accounts",
     "albums",
+    #
     # Third-party Apps
     "crispy_forms",
+    "allauth",
+    "allauth.account",
 ]
 
 MIDDLEWARE = [
@@ -144,8 +149,23 @@ STATICFILES_FINDERS = [
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# most of this is for allauth pkg (line 156, 157) are not
+
 LOGIN_REDIRECT_URL = "home"  # or, can use the actual url with name 'home': "/"
 LOGOUT_REDIRECT_URL = "home"
 
+# allauth explicit logout:
+ACCOUNT_LOGOUT_REDIRECT = "home"  # in case in future we don't want to logout to 'home'
 
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# config for django-allauth
+SITE_ID = 1
+# Adding allauth backend for authentication
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",  # this is the django default backend
+    "allauth.account.auth_backends.AuthenticationBackend",  # new
+)
+# TODO once built, change this back when we have a STMP sever set up
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
