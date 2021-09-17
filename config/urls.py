@@ -20,8 +20,13 @@ urlpatterns = [
     # Django Admin
     path("admin/", admin.site.urls),
     # User mgmt
-    path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("allauth.urls")),
     # Local apps
-    path("accounts/", include("accounts.urls")),
+    # no longer necessary -> using allauth  path("accounts/", include("accounts.urls")),
     path("", include("albums.urls")),
 ]
+
+
+# TODO Delete accounts/urls.py and accounts/view.py - no longer needed as using
+# allauth pkg (pg 109 of dfp)
+# We have also deleted registration folder in templates dir (also see p109 of dfp)
