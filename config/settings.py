@@ -159,6 +159,7 @@ LOGOUT_REDIRECT_URL = "home"
 # allauth explicit logout:
 ACCOUNT_LOGOUT_REDIRECT = "home"  # in case in future we don't want to logout to 'home'
 
+# TODO when deployed, add social login with google and fb (dfp p123, or: https://learndjango.com/tutorials/django-allauth-tutorial)
 # More allauth settings:
 #
 # ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False # Not yet sure I want this
