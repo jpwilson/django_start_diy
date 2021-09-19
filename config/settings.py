@@ -159,6 +159,14 @@ LOGOUT_REDIRECT_URL = "home"
 # allauth explicit logout:
 ACCOUNT_LOGOUT_REDIRECT = "home"  # in case in future we don't want to logout to 'home'
 
+# More allauth settings:
+#
+# ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False # Not yet sure I want this
+# ACCOUNT_SESSION_REMEMBER = True # Not yet sure I want this
+ACCOUNT_USERNAME_REQUIRED = False  # new
+ACCOUNT_AUTHENTICATION_METHOD = "email"  # new
+ACCOUNT_EMAIL_REQUIRED = True  # new
+ACCOUNT_UNIQUE_EMAIL = True  # new
 
 # config for django-allauth
 SITE_ID = 1
