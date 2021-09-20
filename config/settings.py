@@ -176,3 +176,4 @@ AUTHENTICATION_BACKENDS = (
 )
 # TODO once built, change this back when we have a STMP sever set up
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "supalist1@gmail.com"
