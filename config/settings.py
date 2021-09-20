@@ -174,6 +174,10 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",  # this is the django default backend
     "allauth.account.auth_backends.AuthenticationBackend",  # new
 )
-# TODO once built, change this back when we have a STMP sever set up
+# TODO once built, change this back when we have a STMP sever set up - see pg 140 of dff
+#     as well as the sendgrid account created on Mon20Sept2021 for supalist1@gmail.com
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DEFAULT_FROM_EMAIL = "supalist1@gmail.com"
+
+# TODO  add the links and styling for password change and reset (p139 of dfp)
