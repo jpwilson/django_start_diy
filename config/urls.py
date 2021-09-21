@@ -23,7 +23,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Local apps
     # no longer necessary -> using allauth  path("accounts/", include("accounts.urls")),
-    path("", include("albums.urls")),
+    path("", include("pages.urls")),
 ]
 
 
