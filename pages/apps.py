@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class AlbumsConfig(AppConfig):
-    name = 'albums'
+class PagesConfig(AppConfig):
+    name = "pages"
