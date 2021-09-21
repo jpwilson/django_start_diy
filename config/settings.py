@@ -44,14 +44,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     #
-    # Local
-    "accounts",
-    "albums",
-    #
     # Third-party Apps
     "crispy_forms",
     "allauth",
     "allauth.account",
+    #
+    # Local
+    "accounts",
+    "albums",
 ]
 
 MIDDLEWARE = [
@@ -181,3 +181,5 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DEFAULT_FROM_EMAIL = "supalist1@gmail.com"
 
 # TODO  add the links and styling for password change and reset (p139 of dfp)
+# TODO - (20Sept21) - rename albums app to pages -
+#                                       see this link: https://stackoverflow.com/questions/8408046/how-to-change-the-name-of-a-django-app
